@@ -32,7 +32,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.s2stylp.mongodb.net/userDB");
+mongoose.connect(process.env.MONGODB_URI);
 
 const userSchema = new mongoose.Schema({
   email:{

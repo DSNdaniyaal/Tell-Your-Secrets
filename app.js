@@ -69,7 +69,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://immense-ocean-21766.herokuapp.com/auth/google/secrets",
+    callbackURL: "http://localhost:3000/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -122,7 +122,7 @@ app.get("/logout",function(req,res){
 });
 
 app.post("/submit",function(req,res){
-  const submittedSecret = req.body.secret;
+  const submittedSecret = req.body.post;
   User.findById(req.user.id,function(err,foundUser){
     if(err){
       console.log(err);
@@ -130,7 +130,7 @@ app.post("/submit",function(req,res){
       if(foundUser){
         foundUser.secret = submittedSecret;
         foundUser.save(function(){
-          res.redirect("/secrets");
+        res.redirect("/secrets");
         });
       }
     }

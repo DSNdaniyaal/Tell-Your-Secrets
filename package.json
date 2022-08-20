@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Daniyaal S Nayeem",
   "license": "ISC",
   "engines": {
     "node": "16.16.0"

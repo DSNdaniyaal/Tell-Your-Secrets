@@ -1,20 +1,16 @@
-<%- include('partials/header') %>
-
-<div class="container">
-  <div class="jumbotron centered">
-    <i class="fas fa-key fa-6x"></i>
-    <h1 class="display-3">Secrets</h1>
-    <p class="secret-text">Don't keep your secrets, share them anonymously!</p>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Secret</title>
+</head>
+<body>
+    <h1>Submit a Secret</h1>
     <form action="/submit" method="POST">
-
-      <div class="form-group">
-        <input type="text" class="form-control text-center" name="secret" placeholder="What's your secret?">
-      </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
+        <textarea name="post" rows="5" cols="50" placeholder="Enter your secret here..." required></textarea>
+        <br>
+        <button type="submit">Submit</button>
     </form>
-
-
-  </div>
-</div>
-<%- include('partials/footer') %>
+</body>
+</html>

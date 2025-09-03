@@ -1,30 +1,39 @@
 {
-  "name": "secrets",
+  "name": "tell-your-secrets",
   "version": "1.0.0",
-  "description": "First website with authentication.",
-  "main": "app.js",
+  "description": "A web application for sharing secrets anonymously.",
+  "main": "src/app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Daniyaal S Nayeem",
-  "license": "ISC",
-  "engines": {
-    "node": "16.16.0"
+    "start": "ts-node src/app.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev src/app.ts"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "md5": "^2.3.0",
-    "mongoose": "^6.0.8",
-    "mongoose-encryption": "^2.1.1",
-    "mongoose-findorcreate": "^3.no0.0",
-    "passport": "^0.5.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.9",
+    "mongoose-findorcreate": "^1.0.1",
+    "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^6.1.0"
-  }
+    "passport-local-mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/express-session": "^1.18.2",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^14.14.31",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.16",
+    "@types/passport-local": "^1.0.38",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^5.9.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

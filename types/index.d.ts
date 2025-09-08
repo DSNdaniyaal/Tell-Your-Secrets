@@ -4,7 +4,7 @@ declare module "express-session" {
     }
   }
   
-  interface User {
+export interface User {
     email: string;
     password: string;
     googleId?: string;
